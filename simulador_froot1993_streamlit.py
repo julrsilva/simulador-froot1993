@@ -17,7 +17,7 @@ A função de retorno do investimento é **côncava** e segue a forma: \( R(I) =
 """)
 
 # Entradas do usuário
-investimento = st.slider("Investimento pretendido (I)", 60, 200, 100)
+investimento = st.slider("Investimento pretendido (I)", 50, 200, 100)
 a = st.slider("Parâmetro a (retorno marginal inicial)", 0.5, 5.0, 2.0)
 b = st.slider("Parâmetro b (retornos decrescentes)", 0.001, 0.05, 0.01)
 r_base = st.slider("Custo base do capital externo (%)", 0.0, 0.3, 0.10, step=0.01)
