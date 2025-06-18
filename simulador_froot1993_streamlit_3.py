@@ -52,7 +52,7 @@ def retorno(I):
 for cf in cf_vals:
     f1 = max(0, investimento - cf)               #f1 =            100      - 80 = 20
     r1 = r_base + lambda_sens * f1               #r1 = 0.1    + 0.002       * 20 = 0.14 
-    custo1 = cf + f1 * (1 + r1)                  #custo1 = 80 + 20 * (1 + 0.14) = 102.80 
+    custo1 = cf * (1 + custo_ke) + f1 * (1 + r1) #custo1 = 80 * (1 + 0.10) + 20 * (1 + 0.14) = 110.8
     npv1 = retorno(investimento) - custo1        #npv1 =            100        - 102.80 = 2.80 
     npv_sem_hedge.append(npv1)
 
