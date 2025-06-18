@@ -83,7 +83,7 @@ df_result = pd.DataFrame({
     "NPV sem Hedge": npv_sem_hedge,
     "NPV com Hedge": npv_com_hedge,
     "Ganho com Hedge": np.array(npv_com_hedge) - np.array(npv_sem_hedge),
-    "Necess. Financ. Sem Hedge": max(0, investimento - cf),
-    "Necess. Financ. Com Hedge": max(0, investimento - cf * (1+ hedge_financ))
+    "Necess. Financ. Sem Hedge": max(0, investimento - cf_vals),
+    "Necess. Financ. Com Hedge": max(0, investimento - cf_vals * (1+ hedge_financ))
     })
 st.dataframe(df_result, use_container_width=True)
