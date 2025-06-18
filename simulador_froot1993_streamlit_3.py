@@ -65,7 +65,7 @@ for cf in cf_vals:
     #                  100       - 102.488 = 2.49 se o ke=10%, senão = 5.51
     npv_com_hedge.append(npv2)
 
-    ganho_hedge.append(npv2 - npv1)
+  #  ganho_hedge.append(npv2 - npv1)
 
 # Mostrar gráfico
 st.subheader("📈 Resultado: NPV com e sem Hedge")
@@ -85,7 +85,7 @@ st.pyplot(fig)
 df_result = pd.DataFrame({
     "Fluxo de Caixa Interno": cf_vals,
     "NPV sem Hedge": npv_sem_hedge,
-    "NPV com Hedge": npv_com_hedge,
-    "Ganho com Hedge": ganho_hedge
+    "NPV com Hedge": npv_com_hedge
+    #"Ganho com Hedge": ganho_hedge
     })
 st.dataframe(df_result, use_container_width=True)
