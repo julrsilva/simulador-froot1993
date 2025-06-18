@@ -16,9 +16,7 @@ A função de retorno do investimento é **côncava** e segue a forma: \(R(I) = 
 
 Parâmetros:
 I : float — valor do investimento
-
 a : float — parâmetro de retorno marginal inicial
-
 b : float — parâmetro de concavidade (retornos decrescentes)
 
 Retorna:
