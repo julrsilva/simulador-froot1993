@@ -29,7 +29,7 @@ b = st.slider("Parâmetro b (retornos decrescentes)", 0.001, 0.05, 0.01)
 r_base = st.slider("Custo base do capital externo (%)", 0.0, 0.3, 0.10, step=0.01)
 lambda_sens = st.slider("Sensibilidade do custo ao financiamento externo (λ)", 0.0, 0.01, 0.002, step=0.0005)
 custo_hedge_pct = st.slider("Custo do hedge (% do investimento)", 0.0, 0.05, 0.01)
-custo_ke = st.slider("Custo do equity (% requerido pelo acionista ou CAPM)", 0.0, 0.3, 0.0, step=0.01)
+custo_ke = st.slider("Custo do equity (% requerido pelo acionista ou CAPM)", 0.0, 0.3, 0.1, step=0.01)
 hedge_financ = st.slider("Ganho esperado com o hedge em financiamento (% do valor financiado)", 0.0, 0.3, 0.10, step=0.01)
 
 # Fluxos de caixa simulados
