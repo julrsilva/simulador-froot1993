@@ -15,11 +15,15 @@ quando o **fluxo de caixa interno é volátil** e o **financiamento externo é c
 A função de retorno do investimento é **côncava** e segue a forma: \(R(I) = a * I - b * I^2)
 
 Parâmetros:
+
 I : float — valor do investimento
+
 a : float — parâmetro de retorno marginal inicial
+
 b : float — parâmetro de concavidade (retornos decrescentes)
 
 Retorna:
+
 float — retorno do projeto
 """)
 
