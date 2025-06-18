@@ -36,7 +36,7 @@ hedge_financ = st.slider("Ganho esperado com o hedge em financiamento (% do valo
 cf_vals = np.array([100, 80, 60, 40, 20])
 npv_sem_hedge = []
 npv_com_hedge = []
-#ganho_hedge = []
+ganho_hedge = []
 
 # Função de retorno
 def retorno(I):
@@ -50,12 +50,12 @@ for cf in cf_vals:
     npv_sem_hedge.append(npv1)
 
     # Com hedge, assume menor necessidade de financiamento externo
-    f2 = max(0, investimento - cf * hedge_financ)     # f2 =           100     - 80 * 1.1 = 12
+    f2 = max(0, investimento - cf * (1 + hedge_financ))     # f2 =           100     - 80 * 1.1 = 12
     r2 = r_base + lambda_sens * f2                    # r2 = 0.1  + 0.002       * 12 = 0.124
-    custo2 = cf + f2 * (1 + r2) + custo_hedge_pct * investimento     # custo2 =   80 * (1 + 0.1)      + 12 * (1 + 0.124) + 0.01         * 100 = 102.488
+    custo2 = cf * (1 + custo_ke) + f2 * (1 + r2) + custo_hedge_pct * investimento     # custo2 =   80 * (1 + 0.1)      + 12 * (1 + 0.124) + 0.01         * 100 = 102.488
     npv2 = retorno(investimento) - custo2             # npv2 = 100       - 102.488 = 2.49 se o ke=10%, senão = 5.51
     npv_com_hedge.append(npv2)
-  #  ganho_hedge.append(npv2 - npv1)
+    ganho_hedge.append(npv2 - npv1)
 
 # Mostrar gráfico
 st.subheader("📈 Resultado: NPV com e sem Hedge")
@@ -75,7 +75,7 @@ st.pyplot(fig)
 df_result = pd.DataFrame({
     "Fluxo de Caixa Interno": cf_vals,
     "NPV sem Hedge": npv_sem_hedge,
-    "NPV com Hedge": npv_com_hedge
-    #"Ganho com Hedge": ganho_hedge
+    "NPV com Hedge": npv_com_hedge,
+    "Ganho com Hedge": ganho_hedge
     })
 st.dataframe(df_result, use_container_width=True)
