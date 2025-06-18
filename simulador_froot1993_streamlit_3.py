@@ -36,7 +36,7 @@ hedge_financ = st.slider("Ganho esperado com o hedge em financiamento (% do valo
 cf_vals = np.array([100, 80, 60, 40, 20])
 npv_sem_hedge = []
 npv_com_hedge = []
-ganho_hedge = []
+#ganho_hedge = []
 
 # Função de retorno
 def retorno(I):
