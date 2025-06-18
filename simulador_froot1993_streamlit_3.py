@@ -9,10 +9,13 @@ st.title("🎯 Simulador de Gestão de Risco Corporativo")
 st.subheader("Baseado em Froot, Scharfstein e Stein (1993)")
 
 st.markdown("""
+Froot, K. A., Scharfstein, D. S., & Stein, J. C. (1993). Risk management: Coordinating corporate investment and 
+financing policies. The Journal of Finance, 48(5), 1629–1658. Recuperado de https://doi.org/10.1111/j.1540-6261.1993.tb05123.x
+
 Este simulador ilustra como a **gestão de risco** (uso de hedge) pode preservar ou aumentar o valor da empresa 
 quando o **fluxo de caixa interno é volátil** e o **financiamento externo é custoso**.
 
-A função de retorno do investimento é **côncava** e segue a forma: \(R(I) = a * I - b * I^2)
+A função de retorno do investimento é **côncava** e segue a forma: \(R(I) = (a * I) - (b * I²))
 
 Parâmetros:
 
