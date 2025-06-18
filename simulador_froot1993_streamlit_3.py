@@ -84,6 +84,8 @@ df_result = pd.DataFrame({
     "Fluxo de Caixa Interno": cf_vals,
     "NPV sem Hedge": npv_sem_hedge,
     "NPV com Hedge": npv_com_hedge,
-    "Ganho com Hedge": ganho_hedge
+    "Ganho com Hedge": ganho_hedge,
+    "Necessidade de Financ. Sem Hedge": f1,
+    "Necessidade de Financ. Com Hedge": f2
     })
 st.dataframe(df_result, use_container_width=True)
